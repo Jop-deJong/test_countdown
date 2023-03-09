@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset=utf-8>
+    <meta name="robots" content="all">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type = "text/javascript" scr="Datum.js" ></script>
+    <title>Smartschool</title>
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+<button id="ASong" onClick="playPause()" class="muziek">
+
+    <audio
+      src="test.mp3"
+      autoplay
+      loop
+    ></audio>
+    Song
+  </button>
+  
+  <script>
+    var aud = document.getElementById("ASong").children[0];
+    var isPlaying = false;
+    aud.pause();
+  
+    function playPause() {
+      if (isPlaying) {
+        aud.pause();
+      } else {
+        aud.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
